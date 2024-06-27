@@ -13,24 +13,25 @@ Installs the below apps via apt and dpkg;
 balena etcher, curl, flatpak, gdebi, git, gnome-tweak-tool, gparted, gufw, htop, openvpn, rkhunter, synaptic, tilix, unrar, veracrypt (for debian 12), virtualbox, wget, y-ppa-manager, zip, zsh.
 
 
-Installs via wget and dpkg: balenaetcher & veracrypt.
+**Installs via wget and dpkg: balenaetcher & veracrypt.
+**
 
-It will auto install all the below apps using FlatPak:
-
+**It will auto install all the below apps using FlatPak:
+**
 backup (Déjà Dup), bleachbit, brave browser, chrome, deluge, foliate, firefox, gimp, libreoffice, jExifToolGUI, nordpass, telegram, visual studio code, vlc, webtorrent.
 
 
-Get's my other scripts (rkhunter-script)
-
-oh my zsh is a great add-on to zsh: https://github.com/ohmyzsh/ohmyzsh
-
-Also installs rkhunter (a rootkit hunter) which can be configured with the below link:
-
+**Get's my other scripts (rkhunter-script)
+**
+**oh my zsh is a great add-on to zsh: https://github.com/ohmyzsh/ohmyzsh
+**
+**Also installs rkhunter (a rootkit hunter) which can be configured with the below link:
+**
 https://docs.vultr.com/how-to-install-rkhunter-on-debian-10
 
 
-Remember to setup zsh, and add this to your root zshrc file (nano ~/.zshrc) & in your user home folder (/home/$USER/.zshrc).
-
+**Remember to setup zsh, and add this to your root zshrc file (nano ~/.zshrc) & in your user home folder (/home/$USER/.zshrc).
+**
 alias l='ls'  
 alias la='ls -a'  
 alias ll='ls -al'   
