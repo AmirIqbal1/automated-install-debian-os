@@ -19,7 +19,7 @@ apt-get install -f &&
 apt-get clean &&
 apt-get autoclean 
 
-apt-get install curl dconf-editor gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip zsh apt-transport-https -y
+apt-get install curl gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip zsh apt-transport-https -y
 
 echo "installing veracrypt for debian 12 & balenaetcher"
 wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb &&
