@@ -21,6 +21,9 @@ apt-get autoclean
 
 apt-get install curl gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip zsh apt-transport-https -y
 
+echo "fixing some breakages"
+apt-get --fix-broken install -y
+
 echo "installing veracrypt for debian 12 & balenaetcher"
 wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb &&
 wget https://github.com/balena-io/etcher/releases/download/v1.19.21/balena-etcher_1.19.21_amd64.deb &&
