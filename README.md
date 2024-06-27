@@ -1,42 +1,85 @@
 # install.sh
 
-This bash script will auto install selected desktop programs on Debian OS. Working on Debian 12.
+This bash script will automatically install selected desktop programs on Debian OS. It is specifically tested on Debian 12.
 
-To start the download of this script, please run as root:
+## Instructions
 
+To start the download and installation of this script, please run as root:
 
+```bash
 chmod +x install.sh
 ./install.sh
+```
 
-Installs the below apps via apt and dpkg;
+## Installed Applications
 
-balena etcher, curl, flatpak, gdebi, git, gnome-tweak-tool, gparted, gufw, htop, openvpn, rkhunter, synaptic, tilix, unrar, veracrypt (for debian 12), virtualbox, wget, y-ppa-manager, zip, zsh.
+### Via `apt` and `dpkg`
+- Balena Etcher
+- curl
+- flatpak
+- gdebi
+- git
+- gnome-tweak-tool
+- gparted
+- gufw
+- htop
+- openvpn
+- rkhunter
+- synaptic
+- tilix
+- unrar
+- VeraCrypt (for Debian 12)
+- virtualbox
+- wget
+- y-ppa-manager
+- zip
+- zsh
 
+### Via `wget` and `dpkg`
+- Balena Etcher
+- VeraCrypt
 
-Installs via wget and dpkg: balenaetcher & veracrypt.
+### Via Flatpak
+- Déjà Dup (backup)
+- BleachBit
+- Brave Browser
+- Chrome
+- Deluge
+- Foliate
+- Firefox
+- GIMP
+- LibreOffice
+- jExifToolGUI
+- NordPass
+- Telegram
+- Visual Studio Code
+- VLC
+- WebTorrent
 
+## Additional Scripts
+- Downloads and sets up the rkhunter-check script from [GitHub](https://github.com/AmirIqbal1/rkhunter-script).
 
-It will auto install all the below apps using FlatPak:
+## Additional Information
+- **Oh My Zsh** is a great add-on to zsh: [Oh My Zsh GitHub](https://github.com/ohmyzsh/ohmyzsh)
+- **Rkhunter** (a rootkit hunter) can be configured using this [guide](https://docs.vultr.com/how-to-install-rkhunter-on-debian-10).
 
-backup (Déjà Dup), bleachbit, brave browser, chrome, deluge, foliate, firefox, gimp, libreoffice, jExifToolGUI, nordpass, telegram, visual studio code, vlc, webtorrent.
+## Setup Zsh
+Remember to set up zsh and add the following to your root `.zshrc` file (`nano ~/.zshrc`) and your user home folder (`/home/$USER/.zshrc`):
 
+```bash
+alias l='ls'
+alias la='ls -a'
+alias ll='ls -al'
+alias aptupdate='dpkg --configure -a && apt update && apt upgrade -y && apt install -f && apt clean && apt autoclean && apt autoremove -y'
+alias sudo='su -'
+alias servicestat='service --status-all'
+```
 
-Get's my other scripts (rkhunter-script)
+Then apply changes by running:
 
-oh my zsh is a great add-on to zsh: https://github.com/ohmyzsh/ohmyzsh
+```bash
+source /root/.zshrc
+source /home/$USER/.zshrc
+```
 
-Also installs rkhunter (a rootkit hunter) which can be configured with the below link:
-
-https://docs.vultr.com/how-to-install-rkhunter-on-debian-10
-
-
-Remember to setup zsh, and add this to your root zshrc file (nano ~/.zshrc) & in your user home folder (/home/$USER/.zshrc).
-
-alias l='ls'  
-alias la='ls -a'  
-alias ll='ls -al'   
-alias aptupdate='dpkg --configure -a && apt update && apt upgrade -y && apt install -f && apt clean && apt autoclean && apt autoremove -y'      
-alias sudo='su -'  
-alias servicestat='service --status-all'  
-
-then (source /root/.zshrc) & (source /home/$USER/.zshrc) to apply changes.
+This script aims to streamline the installation process of essential applications and configurations on Debian 12.
