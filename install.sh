@@ -1,51 +1,54 @@
 #!/bin/bash
 
-#checks if your root
-## get UID 
-uid=$(id -u)
- 
-[ $uid -ne 0 ] && { echo "Only a root user may run this. Please login as root."; exit 1; }
+# Check if running as root
+if [ "$(id -u)" -ne 0 ]; then
+  echo "Only a root user may run this. Please login as root."
+  exit 1
+fi
 
 echo ""
-read -p "This script will auto install selected programs on Ubuntu OS. View the README file to see what gets installed." -t 6
+read -p "This script will auto install selected programs on Debian 12. View the README file to see what gets installed." -t 6
 echo ""
 
-#updates system ready for script
-echo "getting system ready for packages to be installed"
-dpkg --configure -a &&
-apt-get update &&
-apt-get upgrade -y &&
-apt-get install -f &&
-apt-get clean &&
-apt-get autoclean 
+# Update system and install required packages
+echo "Getting system ready for packages to be installed..."
+dpkg --configure -a
+apt-get update
+apt-get upgrade -y
+apt-get install -f -y
+apt-get clean
+apt-get autoclean
 
-apt-get install curl gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip zsh apt-transport-https -y
+# Install necessary packages
+apt-get install -y curl gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip zsh apt-transport-https flatpak
 
-echo "fixing some breakages"
+# Fix broken dependencies
+echo "Fixing any broken dependencies..."
 apt-get --fix-broken install -y
 
-echo "installing veracrypt for debian 12 & balenaetcher"
-wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb &&
-wget https://github.com/balena-io/etcher/releases/download/v1.19.21/balena-etcher_1.19.21_amd64.deb &&
-dpkg -i veracrypt*.deb &&
-dpkg -i balena*.deb &&
-rm veracrypt*.deb balena*.deb
+# Install VeraCrypt and Balena Etcher
+echo "Installing VeraCrypt and Balena Etcher..."
+wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb
+wget https://github.com/balena-io/etcher/releases/download/v1.19.21/balena-etcher_1.19.21_amd64.deb
+dpkg -i veracrypt-1.26.7-Debian-12-amd64.deb
+dpkg -i balena-etcher_1.19.21_amd64.deb
+rm veracrypt-1.26.7-Debian-12-amd64.deb balena-etcher_1.19.21_amd64.deb
 
-echo "Installing FlatPak packages"
-flatpak install flathub org.gnome.DejaDup org.bleachbit.BleachBit com.brave.Browser com.google.Chrome org.deluge_torrent.deluge com.github.johnfactotum.Foliate org.mozilla.firefox org.gimp.GIMP org.libreoffice.LibreOffice io.github.hvdwofl.jExifToolGUI com.nordpass.NordPass org.telegram.desktop com.visualstudio.code org.videolan.VLC io.webtorrent.WebTorrent -y
+# Install Flatpak packages
+echo "Installing FlatPak packages..."
+flatpak install -y flathub org.gnome.DejaDup org.bleachbit.BleachBit com.brave.Browser com.google.Chrome org.deluge_torrent.deluge com.github.johnfactotum.Foliate org.mozilla.firefox org.gimp.GIMP org.libreoffice.LibreOffice io.github.hvdwofl.jExifToolGUI com.nordpass.NordPass org.telegram.desktop com.visualstudio.code org.videolan.VLC io.webtorrent.WebTorrent
 
-#auto gets my other script
-echo "Grabbing other script: rkhunter-check"
+# Download and set up rkhunter-check script
+echo "Downloading and setting up rkhunter-check script..."
 wget https://raw.githubusercontent.com/AmirIqbal1/rkhunter-script/master/rkhunter-check.sh
-echo "chmodding above script"
 chmod +x rkhunter-check.sh
 
-#fixes any errors and auto cleans packages
-echo "auto cleaning now, and fixing any errors."
-dpkg --configure -a &&
-apt install -f &&
-apt clean &&
-apt autoclean &&
+# Clean up and fix any remaining issues
+echo "Cleaning up and fixing any remaining issues..."
+dpkg --configure -a
+apt install -f -y
+apt clean
+apt autoclean
 apt autoremove -y
 
 echo ""
@@ -53,4 +56,4 @@ echo -e "\e[42mrkhunter has been installed, please configure it using link in RE
 
 echo ""
 echo ""
-echo "All done! You should check above to see if any errors occured. A system reboot is recommended."
+echo "All done! You should check above to see if any errors occurred. A system reboot is recommended."
