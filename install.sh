@@ -13,13 +13,13 @@ echo ""
 #updates system ready for script
 echo "getting system ready for packages to be installed"
 dpkg --configure -a &&
-apt update &&
-apt upgrade -y &&
-apt install -f &&
-apt clean &&
-apt autoclean 
+apt-get update &&
+apt-get upgrade -y &&
+apt-get install -f &&
+apt-get clean &&
+apt-get autoclean 
 
-apt install curl dconf-editor gufw git gdebi gnome-tweak-tool gparted htop openvpn rkhunter synaptic tilix virtualbox unrar wget zip zsh apt-transport-https -y
+apt-get install curl dconf-editor gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip zsh apt-transport-https -y
 
 echo "installing veracrypt for debian 12 & balenaetcher"
 wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb &&
