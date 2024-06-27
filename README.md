@@ -60,7 +60,7 @@ chmod +x install.sh
 - Downloads and sets up the rkhunter-check script from [GitHub](https://github.com/AmirIqbal1/rkhunter-script).
 
 ## Additional Information
-- **Oh My Zsh** is a great add-on to zsh: [Oh My Zsh GitHub](https://github.com/ohmyzsh/ohmyzsh)
+- **Oh My Zsh** is a great add-on to the termina: [Oh My Zsh GitHub](https://github.com/ohmyzsh/ohmyzsh)
 - **Rkhunter** (a rootkit hunter) can be configured using this [guide](https://docs.vultr.com/how-to-install-rkhunter-on-debian-10).
 
 ## Setup Zsh
