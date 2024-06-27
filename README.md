@@ -13,7 +13,7 @@ Installs the below apps via apt and dpkg;
 balena etcher, curl, flatpak, gdebi, git, gnome-tweak-tool, gparted, gufw, htop, openvpn, rkhunter, synaptic, tilix, unrar, veracrypt (for debian 12), virtualbox, wget, y-ppa-manager, zip, zsh.
 
 
-Installs via wget and dpkg: balenaetcher
+Installs via wget and dpkg: balenaetcher & veracrypt.
 
 It will auto install all the below apps using FlatPak:
 
