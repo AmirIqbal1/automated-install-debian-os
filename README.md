@@ -70,7 +70,7 @@ Remember to set up zsh and add the following to your root `.zshrc` file (`nano ~
 alias l='ls'
 alias la='ls -a'
 alias ll='ls -al'
-alias aptupdate='dpkg --configure -a && apt update && apt upgrade -y && apt install -f && apt clean && apt autoclean && apt autoremove -y'
+alias aptupdate='dpkg --configure -a && apt update && apt upgrade -y && apt install -f && flatpak update -y && apt clean && apt autoclean && apt autoremove -y'
 alias sudo='su -'
 alias servicestat='service --status-all'
 ```
