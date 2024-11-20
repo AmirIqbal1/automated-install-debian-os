@@ -28,11 +28,11 @@ apt-get --fix-broken install -y
 
 # Install VeraCrypt and Balena Etcher
 echo "Installing VeraCrypt and Balena Etcher..."
-wget https://launchpad.net/veracrypt/trunk/1.26.7/+download/veracrypt-1.26.7-Debian-12-amd64.deb
-wget https://github.com/balena-io/etcher/releases/download/v1.19.21/balena-etcher_1.19.21_amd64.deb
-dpkg -i veracrypt-1.26.7-Debian-12-amd64.deb
-dpkg -i balena-etcher_1.19.21_amd64.deb
-rm veracrypt-1.26.7-Debian-12-amd64.deb balena-etcher_1.19.21_amd64.deb
+wget https://launchpad.net/veracrypt/trunk/1.26.14/+download/veracrypt-1.26.14-Debian-12-amd64.deb
+wget https://github.com/balena-io/etcher/releases/download/v1.19.25/balena-etcher_1.19.25_amd64.deb
+dpkg -i veracrypt*.deb
+dpkg -i balena*.deb
+rm veracrypt*.deb balena*.deb
 
 # Install Flatpak packages
 echo "Installing FlatPak packages..."
