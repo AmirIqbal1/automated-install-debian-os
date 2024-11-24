@@ -33,7 +33,6 @@ chmod +x install.sh
 - wget
 - y-ppa-manager
 - zip
-- zsh
 
 ### Via `wget` and `dpkg`
 - Balena Etcher
