@@ -20,7 +20,7 @@ apt-get clean
 apt-get autoclean
 
 # Install necessary packages
-apt-get install -y curl gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip zsh apt-transport-https flatpak
+apt-get install -y curl gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip apt-transport-https flatpak
 
 # Fix broken dependencies
 echo "Fixing any broken dependencies..."
