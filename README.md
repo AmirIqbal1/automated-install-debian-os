@@ -57,7 +57,8 @@ chmod +x install.sh
 
 ## Additional Scripts
 - Downloads and sets up the rkhunter-check script from [GitHub](https://github.com/AmirIqbal1/rkhunter-script).
-- Also grabs my backup script from [GitHub](https://github.com/AmirIqbal1/backup-script).
+- Get my backup script from [GitHub](https://github.com/AmirIqbal1/backup-script).
+- Gets my bluelight_filter repo from [GitHub](https://github.com/AmirIqbal1/bluelight-filter).
 
 ## Additional Information
 - **Rkhunter** (a rootkit hunter) can be configured using this [guide](https://docs.vultr.com/how-to-install-rkhunter-on-debian-10).
