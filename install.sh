@@ -7,7 +7,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 echo ""
-read -p "This script will auto install selected programs on Debian 12. View the README file to see what gets installed." -t 6
+read -p "This script will auto install selected programs on Debian (Tested on Debain 12). View the README file to see what gets installed." -t 7
 echo ""
 
 # Update system and install required packages
@@ -43,8 +43,9 @@ echo "Downloading and setting up rkhunter-check script..."
 wget https://raw.githubusercontent.com/AmirIqbal1/rkhunter-script/master/rkhunter-check.sh
 chmod +x rkhunter-check.sh
 
-echo "Downloading backup script..."
+echo "Downloading GitHub Repos:"
 git clone https://github.com/AmirIqbal1/backup-script
+git clone https://github.com/AmirIqbal1/bluelight-filter
 
 # Clean up and fix any remaining issues
 echo "Cleaning up and fixing any remaining issues..."
