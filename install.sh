@@ -44,9 +44,10 @@ echo "Downloading and setting up rkhunter-check script..."
 wget -q https://raw.githubusercontent.com/AmirIqbal1/rkhunter-script/master/rkhunter-check.sh
 chmod +x rkhunter-check.sh
 
-echo "Downloading GitHub Repos:"
+echo "Downloading GitHub Repos (these will need configuring):"
 git clone -q https://github.com/AmirIqbal1/backup-script
 git clone -q https://github.com/AmirIqbal1/bluelight-filter
+git clone -q https://github.com/AmirIqbal1/hardening-debian
 
 # Clean up and fix any remaining issues
 echo "Cleaning up and fixing any remaining issues..."
