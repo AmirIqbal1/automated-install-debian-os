@@ -42,6 +42,7 @@ chmod +x install.sh
 - Déjà Dup (backup)
 - BleachBit
 - Brave Browser
+- Celluloid
 - Chrome
 - Deluge
 - Foliate
@@ -52,7 +53,6 @@ chmod +x install.sh
 - NordPass
 - Telegram
 - Visual Studio Code
-- VLC
 - WebTorrent
 
 ## Additional Scripts
