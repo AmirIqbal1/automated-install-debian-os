@@ -38,6 +38,8 @@ chmod +x install.sh
 - Balena Etcher
 - VeraCrypt
 
+### Adds trim support and sets it up automatically to run
+
 ### Via Flatpak
 - Déjà Dup (backup)
 - BleachBit
