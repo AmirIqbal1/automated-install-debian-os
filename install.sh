@@ -21,7 +21,7 @@ apt-get upgrade -y
 
 # Install necessary packages
 echo "Installing necessary packages..."
-apt-get install -y curl gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip apt-transport-https flatpak
+apt-get install -y curl gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip apt-transport-https flatpak util-linux 
 
 # Fix broken dependencies
 echo "Fixing any broken dependencies..."
@@ -48,6 +48,13 @@ echo "Downloading GitHub Repos (these will need configuring):"
 git clone -q https://github.com/AmirIqbal1/backup-script
 git clone -q https://github.com/AmirIqbal1/bluelight-filter
 git clone -q https://github.com/AmirIqbal1/hardening-debian
+
+echo "Running manual SSD TRIM..."
+fstrim -av
+
+echo "Setting up periodic SSD TRIM with systemd..."
+systemctl enable fstrim.timer
+systemctl start fstrim.timer
 
 # Clean up and fix any remaining issues
 echo "Cleaning up and fixing any remaining issues..."
