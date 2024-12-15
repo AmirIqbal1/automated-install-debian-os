@@ -62,6 +62,7 @@ chmod +x install.sh
 - Get my backup script from [GitHub](https://github.com/AmirIqbal1/backup-script).
 - Gets my bluelight_filter repo from [GitHub](https://github.com/AmirIqbal1/bluelight-filter).
 - Toughen your debain install with this from [GitHub](https://github.com/AmirIqbal1/hardening-debian).
+- Flatpak-cleaner [GitHub](https://github.com/AmirIqbal1/Flatpak-cleaner).
 
 ## Additional Information
 - **Rkhunter** (a rootkit hunter) can be configured using this [guide]((https://www.webhi.com/how-to/how-to-install-and-configure-rootkit-hunter-on-ubuntu-debian/)).
