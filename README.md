@@ -55,6 +55,7 @@ chmod +x install.sh
 - NordPass
 - Telegram
 - Visual Studio Code
+- Warehouse
 - WebTorrent
 
 ## Additional Scripts
