@@ -46,7 +46,6 @@ wget -q https://raw.githubusercontent.com/AmirIqbal1/Flatpak-cleaner/refs/heads/
 chmod +x rkhunter-check.sh flatpak_cleanup.sh
 
 echo "Downloading GitHub Repos (these will need configuring):"
-git clone -q https://github.com/AmirIqbal1/backup-script
 git clone -q https://github.com/AmirIqbal1/bluelight-filter
 git clone -q https://github.com/AmirIqbal1/hardening-debian
 
