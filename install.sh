@@ -39,10 +39,11 @@ rm veracrypt*.deb balena*.deb
 echo "Installing FlatPak packages..."
 flatpak install -y --no-upgrade flathub org.gnome.DejaDup org.bleachbit.BleachBit com.brave.Browser io.github.celluloid_player.Celluloid com.google.Chrome org.deluge_torrent.deluge com.github.johnfactotum.Foliate org.mozilla.firefox org.gimp.GIMP org.libreoffice.LibreOffice io.github.hvdwofl.jExifToolGUI com.nordpass.NordPass org.telegram.desktop com.visualstudio.code org.videolan.VLC io.webtorrent.WebTorrent
 
-# Download and set up rkhunter-check script & download backup script (needs config)
+# Download Github Raw files and Chmod them
 echo "Downloading and setting up rkhunter-check script..."
 wget -q https://raw.githubusercontent.com/AmirIqbal1/rkhunter-script/master/rkhunter-check.sh
-chmod +x rkhunter-check.sh
+wget -q https://raw.githubusercontent.com/AmirIqbal1/Flatpak-cleaner/refs/heads/main/flatpak_cleanup.sh
+chmod +x rkhunter-check.sh flatpak_cleanup.sh
 
 echo "Downloading GitHub Repos (these will need configuring):"
 git clone -q https://github.com/AmirIqbal1/backup-script
