@@ -58,10 +58,9 @@ chmod +x install.sh
 - WebTorrent
 
 ## Additional Scripts
-- Downloads and sets up the rkhunter-check script from [GitHub](https://github.com/AmirIqbal1/rkhunter-script).
-- Get my backup script from [GitHub](https://github.com/AmirIqbal1/backup-script).
-- Gets my bluelight_filter repo from [GitHub](https://github.com/AmirIqbal1/bluelight-filter).
-- Toughen your debain install with this from [GitHub](https://github.com/AmirIqbal1/hardening-debian).
+- Downloads and sets up the rkhunter-check script [GitHub](https://github.com/AmirIqbal1/rkhunter-script).
+- Gets my bluelight_filter python3 script [GitHub](https://github.com/AmirIqbal1/bluelight-filter).
+- Toughen your debain install with this [GitHub](https://github.com/AmirIqbal1/hardening-debian).
 - Flatpak-cleaner [GitHub](https://github.com/AmirIqbal1/Flatpak-cleaner).
 
 ## Additional Information
