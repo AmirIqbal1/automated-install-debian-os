@@ -21,7 +21,7 @@ apt-get upgrade -y
 
 # Install necessary packages
 echo "Installing necessary packages..."
-apt-get install -y curl gufw git gdebi gnome-tweaks gparted htop openvpn rkhunter synaptic tilix wget zip apt-transport-https flatpak util-linux 
+apt-get install -y curl gufw git gdebi gnome-tweaks gparted htop openvpn pandoc rkhunter synaptic tilix wget zip apt-transport-https flatpak util-linux 
 
 # Fix broken dependencies
 echo "Fixing any broken dependencies..."
