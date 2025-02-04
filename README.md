@@ -67,4 +67,4 @@ chmod +x install.sh
 - Flatpak-cleaner [GitHub](https://github.com/AmirIqbal1/Flatpak-cleaner).
 
 ## Additional Information
-- **Rkhunter** (a rootkit hunter) can be configured using this [guide](https://www.webhi.com/how-to/how-to-install-and-configure-rootkit-hunter-on-ubuntu-debian/).
+- **Rkhunter** (a rootkit hunter) can be configured using this [guide](https://tecadmin.net/how-to-install-rkhunter-on-ubuntu/).
