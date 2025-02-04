@@ -49,6 +49,7 @@ chmod +x install.sh
 - Deluge
 - Foliate
 - Firefox
+- Ghostwriter
 - GIMP
 - LibreOffice
 - jExifToolGUI
