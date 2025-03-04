@@ -29,8 +29,8 @@ apt-get --fix-broken install -y
 
 # Install VeraCrypt and Balena Etcher
 echo "Installing VeraCrypt and Balena Etcher..."
-wget -q https://launchpad.net/veracrypt/trunk/1.26.14/+download/veracrypt-1.26.14-Debian-12-amd64.deb
-wget -q https://github.com/balena-io/etcher/releases/download/v1.19.25/balena-etcher_1.19.25_amd64.deb
+wget -q https://launchpad.net/veracrypt/trunk/1.26.20/+download/veracrypt-1.26.20-Debian-12-amd64.deb
+wget -q https://github.com/balena-io/etcher/releases/download/v2.1.0/balena-etcher_2.1.0_amd64.deb
 dpkg -i veracrypt*.deb --force-confnew
 dpkg -i balena*.deb --force-confnew
 rm veracrypt*.deb balena*.deb
