@@ -37,7 +37,7 @@ rm veracrypt*.deb balena*.deb
 
 # Install FlatPak packages
 echo "Installing FlatPak packages..."
-flatpak install -y --no-upgrade flathub org.gnome.DejaDup org.bleachbit.BleachBit com.brave.Browser com.google.Chrome org.deluge_torrent.deluge com.github.johnfactotum.Foliate org.mozilla.firefox org.kde.ghostwriter org.gimp.GIMP org.libreoffice.LibreOffice io.github.hvdwofl.jExifToolGUI com.nordpass.NordPass org.telegram.desktop com.visualstudio.code io.github.flattool.Warehouse io.webtorrent.WebTorrent
+flatpak install -y --no-upgrade flathub org.gnome.DejaDup org.bleachbit.BleachBit com.brave.Browser com.google.Chrome org.deluge_torrent.deluge com.github.johnfactotum.Foliate org.mozilla.firefox org.kde.ghostwriter org.gimp.GIMP org.libreoffice.LibreOffice io.github.hvdwofl.jExifToolGUI com.nordpass.NordPass org.telegram.desktop com.github.unrud.VideoDownloader com.visualstudio.code io.github.flattool.Warehouse io.webtorrent.WebTorrent
 
 # Download Github Raw files and Chmod them
 echo "Downloading and setting up rkhunter-check script..."
