@@ -31,6 +31,7 @@ chmod +x install.sh
 - unrar
 - VeraCrypt (for Debian 12)
 - virtualbox
+- vlc
 - wget
 - y-ppa-manager
 - zip
@@ -45,7 +46,6 @@ chmod +x install.sh
 - Déjà Dup (backup)
 - BleachBit
 - Brave Browser
-- Celluloid
 - Chrome
 - Deluge
 - Foliate
@@ -63,7 +63,7 @@ chmod +x install.sh
 ## Additional Scripts
 - Downloads and sets up the rkhunter-check script [GitHub](https://github.com/AmirIqbal1/rkhunter-script).
 - Gets my bluelight_filter python3 script [GitHub](https://github.com/AmirIqbal1/bluelight-filter).
-- Toughen your debain install with this [GitHub](https://github.com/AmirIqbal1/hardening-debian).
+- Toughen your Debian install with this [GitHub](https://github.com/AmirIqbal1/hardening-debian).
 - Flatpak-cleaner [GitHub](https://github.com/AmirIqbal1/Flatpak-cleaner).
 
 ## Additional Information
