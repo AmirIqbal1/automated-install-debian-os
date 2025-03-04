@@ -24,7 +24,6 @@ chmod +x install.sh
 - gufw
 - htop
 - openvpn
-- pandoc
 - rkhunter
 - synaptic
 - tilix
