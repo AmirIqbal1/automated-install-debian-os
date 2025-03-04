@@ -56,6 +56,7 @@ chmod +x install.sh
 - jExifToolGUI
 - NordPass
 - Telegram
+- Video Downloader
 - Visual Studio Code
 - Warehouse
 - WebTorrent
