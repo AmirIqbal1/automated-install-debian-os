@@ -44,7 +44,6 @@ chmod +x install.sh
 ### Via Flatpak
 - Déjà Dup (backup)
 - BleachBit
-- Brave Browser
 - Chrome
 - Deluge
 - Foliate
