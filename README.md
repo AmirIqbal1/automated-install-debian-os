@@ -14,7 +14,6 @@ chmod +x install.sh
 ## Installed Applications
 
 ### Via `apt` and `dpkg`
-- Balena Etcher
 - curl
 - flatpak
 - gdebi
@@ -28,7 +27,6 @@ chmod +x install.sh
 - synaptic
 - tilix
 - unrar
-- VeraCrypt (for Debian 12)
 - virtualbox
 - vlc
 - wget
