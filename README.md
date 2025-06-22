@@ -1,4 +1,4 @@
-# 🛠 install.sh — Debian 12 Auto Setup Script
+# install.sh — Debian 12 Auto Setup Script
 
 ![Debian](https://img.shields.io/badge/Debian-12-red?logo=debian)
 ![Shell Script](https://img.shields.io/badge/script-bash-1f425f.svg)
@@ -8,7 +8,7 @@ A bash script that automates the installation of essential desktop apps, develop
 
 ---
 
-## ✅ TL;DR
+## TL;DR
 
 This script:
 
@@ -21,7 +21,7 @@ This script:
 
 ---
 
-## 📥 How to Use
+## How to Use
 
 Run the following commands as **root**:
 
@@ -29,17 +29,13 @@ Run the following commands as **root**:
 chmod +x install.sh
 ./install.sh
 ```
-📦 Installed Applications
-🧰 APT-installed Utilities
-System Utilities
+## APT Installed Applications
 
 curl, wget, zip, gdebi
 
 apt-transport-https, software-properties-common
 
 ca-certificates, gnupg, lsb-release
-
-System Tools
 
 htop, gparted, gufw, gnome-tweaks
 
@@ -49,8 +45,7 @@ rkhunter, preload, zram-tools
 
 util-linux, flatpak
 
-🧼 Flatpak Apps Replaced with APT/.deb Versions
-These apps are no longer installed via Flatpak. They’re installed using APT or .deb:
+## Flatpak Apps Replaced with APT/.deb Versions
 
 Firefox (via official Mozilla APT repository)
 
@@ -66,15 +61,14 @@ BleachBit
 
 Foliate
 
-📥 Other .deb Installed Packages (via wget)
+## Other .deb Installed Packages (via wget)
 VeraCrypt (Debian 12-specific)
 
 Balena Etcher
 
 Google Chrome
 
-🧩 Flatpak Applications (used where APT is less ideal)
-Déjà Dup (Backup)
+## Flatpak Applications
 
 LibreOffice
 
@@ -84,26 +78,24 @@ NordPass
 
 Telegram
 
-Ghostwriter
-
 Video Downloader
 
 Warehouse (Flatpak Manager)
 
 WebTorrent
 
-⚙️ System Enhancements
-💾 SSD TRIM Support
+## System Enhancements
+SSD TRIM Support
 Executes fstrim -av (trims SSD)
 
 Enables fstrim.timer with systemd
 
-🔋 TLP (Battery Optimization)
+TLP (Battery Optimization)
 Installed with apt
 
 Automatically enabled on boot
 
-🧠 Memory & Cache Tweaks
+## Memory & Cache Tweaks
 Installs zram-tools to compress swap in RAM
 
 Runs swapon --show to confirm active swap
@@ -112,7 +104,7 @@ Applies vm.vfs_cache_pressure=50 for better file caching
 
 Persists setting in /etc/sysctl.conf
 
-📜 Additional Scripts & Repositories
+## Additional Scripts & Repositories
 | Tool/Repo                                                             | Description                           |
 | --------------------------------------------------------------------- | ------------------------------------- |
 | [`rkhunter-check`](https://github.com/AmirIqbal1/rkhunter-script)     | Automates security scans via rkhunter |
@@ -120,11 +112,11 @@ Persists setting in /etc/sysctl.conf
 | [`bluelight-filter`](https://github.com/AmirIqbal1/bluelight-filter)  | Blue light screen tint Python script  |
 | [`hardening-debian`](https://github.com/AmirIqbal1/hardening-debian)  | Security hardening tools for Debian   |
 
-🔐 Rootkit Hunter (rkhunter)
+## Rootkit Hunter (rkhunter)
 rkhunter is installed to check for backdoors and rootkits.
 
-📖 [`How to configure rkhunter`](https://tecadmin.net/how-to-install-rkhunter-on-ubuntu)
+[`How to configure rkhunter`](https://tecadmin.net/how-to-install-rkhunter-on-ubuntu)
 
 
-✅ After installation completes, a system reboot is recommended.
+## After installation completes, a system reboot is recommended.
 
