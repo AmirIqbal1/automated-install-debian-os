@@ -82,13 +82,17 @@ echo "deb [signed-by=/etc/apt/keyrings/vscode.gpg] https://packages.microsoft.co
 apt-get update
 apt-get install -y code
 
+# Add Spotify APT repository and install Spotify
+echo "Adding Spotify repository and installing Spotify client..."
+curl -sS https://download.spotify.com/debian/pubkey_C85668DF69375001.gpg | gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+echo "deb https://repository.spotify.com stable non-free" | tee /etc/apt/sources.list.d/spotify.list
+apt-get update
+apt-get install -y spotify-client
+
 # Install remaining Flatpak apps
 echo "Installing remaining Flatpak apps..."
 flatpak install -y --no-upgrade flathub \
-  org.gnome.DejaDup \
   org.libreoffice.LibreOffice \
-  io.github.hvdwofl.jExifToolGUI \
-  com.nordpass.NordPass \
   org.telegram.desktop \
   com.github.unrud.VideoDownloader \
   io.github.flattool.Warehouse \
