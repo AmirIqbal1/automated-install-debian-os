@@ -11,7 +11,6 @@ A bash script that automates the installation of essential desktop apps, develop
 ## TL;DR
 
 This script:
-
 - Installs popular apps (Firefox, Chrome, VS Code, GIMP, etc.) using APT or .deb
 - Adds SSD and RAM performance optimizations
 - Configures swap compression (zram) and filesystem cache
@@ -22,7 +21,6 @@ This script:
 ---
 
 ## How to Use
-
 Run the following commands as **root**:
 
 ```bash
@@ -30,78 +28,51 @@ chmod +x install.sh
 ./install.sh
 ```
 ## APT Installed Applications
-
 curl, wget, zip, gdebi
-
 apt-transport-https, software-properties-common
-
 ca-certificates, gnupg, lsb-release
-
 htop, gparted, gufw, gnome-tweaks
-
 synaptic, tilix, openvpn, vlc
-
 rkhunter, preload, zram-tools
-
 util-linux, flatpak
 
 ## Flatpak Apps Replaced with APT/.deb Versions
-
 Firefox (via official Mozilla APT repository)
-
 Google Chrome (via .deb)
-
 Visual Studio Code (via Microsoft APT repository)
-
 GIMP
-
 Deluge
-
 BleachBit
-
 Foliate
 
 ## Other .deb Installed Packages (via wget)
+Balena Etcher
+Google Chrome
+Spotify
 VeraCrypt (Debian 12-specific)
 
-Balena Etcher
-
-Google Chrome
-
 ## Flatpak Applications
-
 LibreOffice
-
 jExifToolGUI
-
 NordPass
-
 Telegram
-
 Video Downloader
-
 Warehouse (Flatpak Manager)
-
 WebTorrent
 
 ## System Enhancements
 SSD TRIM Support
 Executes fstrim -av (trims SSD)
-
 Enables fstrim.timer with systemd
 
 TLP (Battery Optimization)
 Installed with apt
-
 Automatically enabled on boot
 
 ## Memory & Cache Tweaks
 Installs zram-tools to compress swap in RAM
-
 Runs swapon --show to confirm active swap
-
 Applies vm.vfs_cache_pressure=50 for better file caching
-
 Persists setting in /etc/sysctl.conf
 
 ## Additional Scripts & Repositories
