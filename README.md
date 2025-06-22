@@ -1,67 +1,130 @@
-# install.sh
+# 🛠 install.sh — Debian 12 Auto Setup Script
 
-This bash script will automatically install selected desktop programs on Debian OS. It is specifically tested on Debian 12.
+![Debian](https://img.shields.io/badge/Debian-12-red?logo=debian)
+![Shell Script](https://img.shields.io/badge/script-bash-1f425f.svg)
+![Maintained](https://img.shields.io/badge/maintained-yes-brightgreen)
 
-## Instructions
+A bash script that automates the installation of essential desktop apps, developer tools, security enhancements, and performance optimizations for **Debian 12**.
 
-To start the download and installation of this script, please run as root:
+---
+
+## ✅ TL;DR
+
+This script:
+
+- Installs popular apps (Firefox, Chrome, VS Code, GIMP, etc.) using APT or .deb
+- Adds SSD and RAM performance optimizations
+- Configures swap compression (zram) and filesystem cache
+- Installs TLP for better laptop battery life
+- Downloads extra scripts for hardening and maintenance
+- Uses Flatpak only where no APT alternative is ideal
+
+---
+
+## 📥 How to Use
+
+Run the following commands as **root**:
 
 ```bash
 chmod +x install.sh
 ./install.sh
 ```
+📦 Installed Applications
+🧰 APT-installed Utilities
+System Utilities
 
-## Installed Applications
+curl, wget, zip, gdebi
 
-### Via `apt` and `dpkg`
-- curl
-- flatpak
-- gdebi
-- git
-- gnome-tweak-tool
-- gparted
-- gufw
-- htop
-- openvpn
-- rkhunter
-- synaptic
-- tilix
-- unrar
-- virtualbox
-- vlc
-- wget
-- y-ppa-manager
-- zip
+apt-transport-https, software-properties-common
 
-### Via `wget` and `dpkg`
-- Balena Etcher
-- VeraCrypt
+ca-certificates, gnupg, lsb-release
 
-### Adds trim support and sets it up automatically to run
+System Tools
 
-### Via Flatpak
-- Déjà Dup (backup)
-- BleachBit
-- Chrome
-- Deluge
-- Foliate
-- Firefox
-- Ghostwriter
-- GIMP
-- LibreOffice
-- jExifToolGUI
-- NordPass
-- Telegram
-- Video Downloader
-- Visual Studio Code
-- Warehouse
-- WebTorrent
+htop, gparted, gufw, gnome-tweaks
 
-## Additional Scripts
-- Downloads and sets up the rkhunter-check script [GitHub](https://github.com/AmirIqbal1/rkhunter-script).
-- Gets my bluelight_filter python3 script [GitHub](https://github.com/AmirIqbal1/bluelight-filter).
-- Toughen your Debian install with this [GitHub](https://github.com/AmirIqbal1/hardening-debian).
-- Flatpak-cleaner [GitHub](https://github.com/AmirIqbal1/Flatpak-cleaner).
+synaptic, tilix, openvpn, vlc
 
-## Additional Information
-- **Rkhunter** (a rootkit hunter) can be configured using this [guide](https://tecadmin.net/how-to-install-rkhunter-on-ubuntu/).
+rkhunter, preload, zram-tools
+
+util-linux, flatpak
+
+🧼 Flatpak Apps Replaced with APT/.deb Versions
+These apps are no longer installed via Flatpak. They’re installed using APT or .deb:
+
+Firefox (via official Mozilla APT repository)
+
+Google Chrome (via .deb)
+
+Visual Studio Code (via Microsoft APT repository)
+
+GIMP
+
+Deluge
+
+BleachBit
+
+Foliate
+
+📥 Other .deb Installed Packages (via wget)
+VeraCrypt (Debian 12-specific)
+
+Balena Etcher
+
+Google Chrome
+
+🧩 Flatpak Applications (used where APT is less ideal)
+Déjà Dup (Backup)
+
+LibreOffice
+
+jExifToolGUI
+
+NordPass
+
+Telegram
+
+Ghostwriter
+
+Video Downloader
+
+Warehouse (Flatpak Manager)
+
+WebTorrent
+
+⚙️ System Enhancements
+💾 SSD TRIM Support
+Executes fstrim -av (trims SSD)
+
+Enables fstrim.timer with systemd
+
+🔋 TLP (Battery Optimization)
+Installed with apt
+
+Automatically enabled on boot
+
+🧠 Memory & Cache Tweaks
+Installs zram-tools to compress swap in RAM
+
+Runs swapon --show to confirm active swap
+
+Applies vm.vfs_cache_pressure=50 for better file caching
+
+Persists setting in /etc/sysctl.conf
+
+📜 Additional Scripts & Repositories
+| Tool/Repo                                                             | Description                           |
+| --------------------------------------------------------------------- | ------------------------------------- |
+| [`rkhunter-check`](https://github.com/AmirIqbal1/rkhunter-script)     | Automates security scans via rkhunter |
+| [`flatpak_cleanup.sh`](https://github.com/AmirIqbal1/Flatpak-cleaner) | Removes unused Flatpak data           |
+| [`bluelight-filter`](https://github.com/AmirIqbal1/bluelight-filter)  | Blue light screen tint Python script  |
+| [`hardening-debian`](https://github.com/AmirIqbal1/hardening-debian)  | Security hardening tools for Debian   |
+
+🔐 Rootkit Hunter (rkhunter)
+rkhunter is installed to check for backdoors and rootkits.
+
+📖 [`How to configure rkhunter`](https://tecadmin.net/how-to-install-rkhunter-on-ubuntu)
+
+
+✅ After installation completes, a system reboot is recommended.
+
