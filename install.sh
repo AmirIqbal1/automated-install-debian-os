@@ -84,6 +84,10 @@ wget -q https://github.com/webtorrent/webtorrent-desktop/releases/download/v0.24
 dpkg -i webtorrent-desktop_0.24.0_amd64.deb || apt-get install -f -y
 rm webtorrent-desktop_0.24.0_amd64.deb
 
+# Removes Deja Dup Backups APT package
+echo "Removing Deja Dup Backups APT package..."
+apt-get remove --purge -y deja-dup
+
 # Flatpak apps (minimal, non-duplicated with APT)
 echo "Installing remaining Flatpak apps..."
 flatpak install -y --no-upgrade flathub \
@@ -103,7 +107,6 @@ chmod +x rkhunter-check.sh flatpak_cleanup.sh
 
 # Clone GitHub tools
 echo "Cloning GitHub repositories..."
-git clone -q https://github.com/AmirIqbal1/bluelight-filter
 git clone -q https://github.com/AmirIqbal1/hardening-debian
 
 # Enable SSD TRIM
