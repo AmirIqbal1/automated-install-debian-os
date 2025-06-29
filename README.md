@@ -52,6 +52,7 @@ Spotify
 VeraCrypt (Debian 12-specific)
 
 ## Flatpak Applications
+Deja Dup Backups
 LibreOffice
 jExifToolGUI
 NordPass
