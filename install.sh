@@ -92,7 +92,8 @@ flatpak install -y --no-upgrade flathub \
   com.github.unrud.VideoDownloader \
   io.github.flattool.Warehouse \
   io.github.hvdwofl.jExifToolGUI \
-  com.nordpass.NordPass
+  com.nordpass.NordPass \
+  org.gnome.DejaDup
 
 # Download additional scripts
 echo "Downloading rkhunter-check & flatpak cleanup script..."
