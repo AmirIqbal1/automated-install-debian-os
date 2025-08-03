@@ -91,6 +91,7 @@ apt-get remove --purge -y deja-dup
 # Flatpak apps (minimal, non-duplicated with APT)
 echo "Installing remaining Flatpak apps..."
 flatpak install -y --no-upgrade flathub \
+  org.gnome.Calculator \
   org.gnome.DejaDup \
   org.telegram.desktop \
   com.github.unrud.VideoDownloader \
