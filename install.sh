@@ -20,8 +20,8 @@ apt-get update && apt-get upgrade -y
 # Install core packages
 echo "Installing core packages..."
 apt-get install -y \
-  curl wget zip gdebi apt-transport-https software-properties-common ca-certificates gnupg lsb-release \
-  gufw git gnome-tweaks gparted htop openvpn rkhunter synaptic tilix vlc \
+  celluloid curl wget zip gdebi apt-transport-https software-properties-common ca-certificates gnupg lsb-release \
+  gufw git gnome-tweaks gparted htop openvpn rkhunter synaptic tilix \
   flatpak util-linux preload zram-tools libreoffice bleachbit deluge foliate gimp code \
   thunderbird plank tlp gnome-software-plugin-flatpak
 
