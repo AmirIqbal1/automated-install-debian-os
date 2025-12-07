@@ -42,12 +42,13 @@ echo "vm.vfs_cache_pressure=50" | tee -a /etc/sysctl.conf
 echo "Fixing any broken packages..."
 apt-get --fix-broken install -y
 
-# Install VeraCrypt and Balena Etcher
-echo "Installing VeraCrypt and Balena Etcher..."
-wget -q https://launchpad.net/veracrypt/trunk/1.26.20/+download/veracrypt-1.26.20-Debian-12-amd64.deb
+# Install VeraCrypt, Balena Etcher & Google Chrome
+echo "Installing VeraCrypt, Balena Etcher & Google Chrome..."
+wget -q https://launchpad.net/veracrypt/trunk/1.26.24/+download/veracrypt-1.26.24-Debian-13-amd64.deb
 wget -q https://github.com/balena-io/etcher/releases/download/v2.1.0/balena-etcher_2.1.0_amd64.deb
-dpkg -i veracrypt*.deb balena*.deb || apt-get install -f -y
-rm veracrypt*.deb balena*.deb
+wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dpkg -i veracrypt*.deb balena*.deb google-chrome*.deb || apt-get install -f -y
+rm veracrypt*.deb balena*.deb google-chrome*.deb
 
 # Install Firefox via Mozilla APT repo
 echo "Installing Firefox from Mozilla APT repo..."
@@ -58,12 +59,6 @@ echo 'Package: *
 Pin: origin packages.mozilla.org
 Pin-Priority: 1000' | tee /etc/apt/preferences.d/mozilla
 apt-get update && apt-get install -y firefox
-
-# Install Chrome
-echo "Installing Google Chrome..."
-wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-dpkg -i google-chrome*.deb || apt-get install -f -y
-rm google-chrome*.deb
 
 # Install VS Code via Microsoft APT repo
 echo "Installing VS Code via Microsoft repository..."
@@ -95,10 +90,7 @@ flatpak install -y --no-upgrade flathub \
   org.gnome.DejaDup \
   org.telegram.desktop \
   com.github.unrud.VideoDownloader \
-  io.github.flattool.Warehouse \
-  io.github.hvdwofl.jExifToolGUI \
-  com.nordpass.NordPass \
-  org.gnome.DejaDup
+  io.github.flattool.Warehouse
 
 # Download additional scripts
 echo "Downloading rkhunter-check & flatpak cleanup script..."
